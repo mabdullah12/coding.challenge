@@ -31,4 +31,8 @@ public class Booking {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cab_id")
     Cab cab;
+    @Column(name = "comment")
+    String comment;
+    @Column(name = "rating")
+    int rating = -1;
 }

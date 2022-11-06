@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "38c0ee70-7704-4082-8811-7118dc83430f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16381282"
+	},
+	"item": [
+		{
+			"name": "UPDATE BOOKING",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": 1,\r\n    \"requestTime\": \"2022.10.30 24:50\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/booking/update?bookingCode=8ba448d9-8dc8-489f-959a-570a607cf887",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"update"
+					],
+					"query": [
+						{
+							"key": "bookingCode",
+							"value": "8ba448d9-8dc8-489f-959a-570a607cf887"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE BOOKING",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": 1,\r\n    \"vehicleType\": \"BIKE\",\r\n    \"requestTime\": \"2022.11.06 23:55\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/booking/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CANCEL BOOKING (ADMIN)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/admin/management/cancel-booking?bookCode=a4b09dd4-612d-49bb-b1d3-989b12ea92cd",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"management",
+						"cancel-booking"
+					],
+					"query": [
+						{
+							"key": "bookCode",
+							"value": "a4b09dd4-612d-49bb-b1d3-989b12ea92cd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL BOOKINGS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/booking/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BOOKING BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/booking?bookingId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking"
+					],
+					"query": [
+						{
+							"key": "bookingId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BOOKING BY CAB ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/booking/cab-bookings?cabId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"cab-bookings"
+					],
+					"query": [
+						{
+							"key": "cabId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BOOKINGS BY CUSTOMER ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/booking/customer-bookings?customerId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"customer-bookings"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BOOKING BY CAB TYPE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/booking/cab-type?type=SEDAN",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"cab-type"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "SEDAN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ASSIGN CAB (ADMIN)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/admin/management/assign-cab?id=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"management",
+						"assign-cab"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CANCEL BOOKING",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/booking/cancel?bookingCode=ce2d2958-d6da-4b4c-86cf-979182d27878&customerId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"cancel"
+					],
+					"query": [
+						{
+							"key": "bookingCode",
+							"value": "ce2d2958-d6da-4b4c-86cf-979182d27878"
+						},
+						{
+							"key": "customerId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAB BLOCK STATUS",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/admin/management/cab-status?cabId=1&block=true",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"management",
+						"cab-status"
+					],
+					"query": [
+						{
+							"key": "cabId",
+							"value": "1"
+						},
+						{
+							"key": "block",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BLOCK CUSTOMER",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/admin/management/customer-status?customerId=1&block=true",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"management",
+						"customer-status"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "1"
+						},
+						{
+							"key": "block",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SET COMMENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/customer/booking-comment?bookingId=1&comment=hello world",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"booking-comment"
+					],
+					"query": [
+						{
+							"key": "bookingId",
+							"value": "1"
+						},
+						{
+							"key": "comment",
+							"value": "hello world"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SET RATING",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/customer/booking-rating?bookingId=2&rating=4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"booking-rating"
+					],
+					"query": [
+						{
+							"key": "bookingId",
+							"value": "2"
+						},
+						{
+							"key": "rating",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -18,4 +18,6 @@ public class Cab {
     String vehicleType;
     @Column(name = "status")
     String status;
+    @Column(name = "blocked")
+    int blocked = 0;
 }

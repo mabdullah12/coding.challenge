@@ -126,4 +126,17 @@ public class BookingValidation {
         response.setCode(HttpStatus.OK.value());
         return response;
     }
+
+    public NetworkResponseDto confirmBookingValidation(Booking booking, NetworkResponseDto response){
+        response.setCode(HttpStatus.BAD_REQUEST.value());
+        if(booking==null){
+            response.setMsg(Message.error.BOOKING_NOT_FOUND_BY_CODE);
+            return response;
+        } else if (!booking.getStatus().equals(BookingStatus.REQUESTED.toString())) {
+            response.setMsg(String.format(Message.error.BOOKING_IS_ALREADY_,booking.getStatus()));
+            return response;
+        }
+        response.setCode(HttpStatus.OK.value());
+        return response;
+    }
 }

@@ -32,4 +32,17 @@ public class CabService {
         return cabRepository.findById(cabId);
     }
 
+
+    /**
+     * Get Cab for a booking based on business logic
+     * Currently any random cab is selected.
+     * We can fetch nearest cab drivers or based on other params.
+     * @param vehicleType
+     * @return
+     */
+    public Cab getCab(VehicleType vehicleType){
+        List<Cab> cabs = this.findAvailableCabByVehicleType(vehicleType);
+//        if no cab found return null otherwise return first cab in list
+        return cabs.isEmpty() ? null : cabs.get(0);
+    }
 }

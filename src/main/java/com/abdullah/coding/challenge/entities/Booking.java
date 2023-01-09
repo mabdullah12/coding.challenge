@@ -18,7 +18,7 @@ public class Booking {
     @Column(name = "status")
     String status;
     @Column(name = "vehicle_type")
-    String vehicalType;
+    String vehicleType;
     @Column(name = "request_time")
     Timestamp requestTime;
     @Column(name = "creation_time")

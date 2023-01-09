@@ -1,5 +1,6 @@
 package com.abdullah.coding.challenge.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -11,6 +12,7 @@ import java.sql.Timestamp;
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     @Column(name = "id")
     Integer id;
     @Column(name = "booking_code")
@@ -18,7 +20,7 @@ public class Booking {
     @Column(name = "status")
     String status;
     @Column(name = "vehicle_type")
-    String vehicalType;
+    String vehicleType;
     @Column(name = "request_time")
     Timestamp requestTime;
     @Column(name = "creation_time")

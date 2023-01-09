@@ -122,6 +122,10 @@ public class BookingValidation {
                 return response;
 
             }
+            else if(booking.getStatus().equals(BookingStatus.REQUESTED.toString())){
+                response.setMsg(Message.error.REQUESTED_BOOKING_NOT_COMPLETE);
+                return response;
+            }
         }
         response.setCode(HttpStatus.OK.value());
         return response;

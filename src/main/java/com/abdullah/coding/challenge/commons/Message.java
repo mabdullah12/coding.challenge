@@ -11,6 +11,8 @@ public class Message {
         public static final String BOOKING_NOT_FOUND_BY_CODE = "Booking not found by booking code";
         public static final String BOOKING_NOT_COMPLETED = "Only completed booking can be rated.";
         public static final String INVALID_RATING = "Rating range should be between %.1f and %.1f .  ";
+        public static final String REQUESTED_BOOKING_NOT_COMPLETE = "Only Assigned booking can be completed";
+
         public static final String CANNOT_UPDATE_CANCEL_COMPLETE_BOOKING = "Completed or Canceled booking cannot be updated";
 
     }

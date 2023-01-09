@@ -39,7 +39,7 @@ public class AdminService {
         Booking booking = bookingService.findByBookingCode(bookingCode);
         bookingValidation.confirmBookingValidation(booking,response);
 //        if validation not passed then return validation error
-        if(response.getCode().equals(HttpStatus.BAD_REQUEST)){
+        if(response.getCode().equals(HttpStatus.BAD_REQUEST.value())){
             return response;
         }
 //        get available cabs for assigning i.e. we can check nearest cab to customer location

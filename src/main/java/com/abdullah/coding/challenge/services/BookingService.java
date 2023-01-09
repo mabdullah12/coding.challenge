@@ -106,9 +106,9 @@ public class BookingService {
 //        setting default code as BAD_REQUEST because of validation
 //        but marks success only when rating is applied.
         Booking booking = bookingRepository.findByBookingCode(bookingCode);
-        response = bookingValidation.changeBookingStatusValidation(booking, response, bookingStatus);
+        bookingValidation.changeBookingStatusValidation(booking, response, bookingStatus);
 //        when validations are passed
-        if(response.getCode().equals(HttpStatus.OK)){
+        if(response.getCode().equals(HttpStatus.OK.value())){
             if(booking.getStatus().equals(BookingStatus.ASSIGNED.toString())){
                 Cab cab = booking.getCab();
                 cabService.updateCabStatus(cab,CabStatus.AVAILABLE);
@@ -125,7 +125,7 @@ public class BookingService {
 
             }
             this.save(booking);
-            response.setMsg(Message.success.BOOKING_CANCELED);
+            response.setMsg(bookingStatus.toString());
             response.setData(booking);
             return response;
 
